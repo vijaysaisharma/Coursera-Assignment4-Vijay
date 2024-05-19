@@ -18,6 +18,6 @@
     <li ng-repeat="item in menuCategoriesCtrl.menuCategories">
         <a
             ui-sref="details({categoryShortName: item.short_name })">
-            {{$index}} {{item.id}} {{ item.name }}of {{ item.short_name }} </a>
+            "Category Id: " {{item.id}} , " Category Name: " {{ item.name }} of "Category Short Name: " {{ item.short_name }} </a>
     </li>
 </ul>
