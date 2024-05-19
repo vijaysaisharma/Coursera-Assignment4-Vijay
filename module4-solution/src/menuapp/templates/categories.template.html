@@ -1,7 +1,7 @@
-<div>{{ $ctrl.menuCategories.length }}</div>
+<div>"Inside categories template" + {{$ctrl}}</div>
 <ul>
     <li ng-repeat="item in $ctrl.menuCategories">
-        <!-- ui-sref="itemDetail({itemId: $index})"> -->
+        ui-sref="itemDetail({itemId: $index})">
       {{ item.name }} of {{ item.short_name }}
     </li>
 </ul>
