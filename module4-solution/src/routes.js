@@ -28,7 +28,11 @@
             resolve: {
                 menuCategories: ['MenuDataService', function (MenuDataService) {
                     console.log('inside resolve');
-                    return MenuDataService.getAllCategories();                    
+                    return MenuDataService.getAllCategories()
+                        .then(function(response){
+                            console.log('in then resolve');
+                            return response;
+                        });                    
                 }]
             }
         });

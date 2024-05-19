@@ -17,8 +17,6 @@
             }).then(function(response){
                 console.log('data: ', response.data);
                 return response.data;
-            }).error(function(){
-                console.log('error');
             });
         };
 
