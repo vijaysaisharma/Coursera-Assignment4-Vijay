@@ -24,10 +24,12 @@
             console.log('in getItemsForCategory()' );
             return $http({
                 method: "GET",
-                url: (ApiBasePath + "/categories.json" + "/" + categoryShortName)
+                // url: (ApiBasePath + "/menu_items/" + "L" + ".json")
+                url: ('https://coursera-jhu-default-rtdb.firebaseio.com/menu_items/L.json')
             }).then(function(response){
-                console.log('data: ', response.data);
-                return response.data;
+                console.log('categoryShortName: ', categoryShortName);
+                console.log('data: ', response.data.menu_items);
+                return response.data.menu_items;
             });
         };
     };
