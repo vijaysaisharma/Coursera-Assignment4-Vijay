@@ -21,7 +21,14 @@
         };
 
         service.getItemsForCategory = function(categoryShortName){
-
+            console.log('in getItemsForCategory()' );
+            return $http({
+                method: "GET",
+                url: (ApiBasePath + "/categories.json" + "/" + categoryShortName)
+            }).then(function(response){
+                console.log('data: ', response.data);
+                return response.data;
+            });
         };
     };
 })();

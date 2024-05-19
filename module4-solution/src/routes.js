@@ -35,6 +35,24 @@
                         });                    
                 }]
             }
+        })
+        
+        .state('menuCategoryDetail', {
+            url: '/menu-category-detail/{categoryShortName}',
+            templateUrl: 'src/menuapp/templates/menu-category-detail.template.html',
+            controller: 'MenuCategoryDetailController as menuCategoryDetailCtrl',           
+            resolve: {
+                menuCategoryDetail: ['$stateParams','MenuDataService', 
+                    function ($stateParams, MenuDataService) {
+                    console.log('inside detail resolve, itemIdx:')
+                    console.log($stateParams.itemIdx);
+                    return MenuDataService.getItemsForCategory($stateParams.categoryShortName)
+                        .then(function(response){
+                            console.log('in detail then resolve' );
+                            return response;
+                        });                    
+                }]
+            }
         });
     };
 

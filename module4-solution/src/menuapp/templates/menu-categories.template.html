@@ -1,4 +1,4 @@
-<a ui-sref="home">Home</a> &lt; <span>List</span>
+<!-- <a ui-sref="home">Home</a> &lt; <span>List</span>
 
 <h3>Available Categories in the Menu</h3>
 <div>{{ menuCategoriesCtrl.menuCategories.length }}</div>
@@ -9,4 +9,15 @@
     </li>
 </ul>
 <categories menuCategories="menuCategoriesCtrl.menuCategories"></categories>
-<ui-view></ui-view>
+<ui-view></ui-view> -->
+
+<a ui-sref="home">Home</a> &lt; <span>List</span>
+
+<h3>Available Categories in the Menu</h3>
+<ul>
+    <li ng-repeat="item in menuCategoriesCtrl.menuCategories">
+        <a
+            ui-sref="menuCategoryDetail({itemIdx: item.short_name})">
+            {{$index}} {{item.id}} {{ item.name }}of {{ item.short_name }} </a>
+    </li>
+</ul>
