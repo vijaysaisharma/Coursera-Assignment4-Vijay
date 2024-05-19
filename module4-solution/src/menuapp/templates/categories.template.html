@@ -1,7 +1,7 @@
-<div>{{ menuCategoriesCtrl.menuCategories }}</div>
+<div>{{ $ctrl.menuCategories.length }}</div>
 <ul>
-    <li ng-repeat="item in menuCategoriesCtrl.menuCategories"
-        ui-sref="itemDetail({itemId: $index})">
+    <li ng-repeat="item in $ctrl.menuCategories">
+        <!-- ui-sref="itemDetail({itemId: $index})"> -->
       {{ item.name }} of {{ item.short_name }}
     </li>
 </ul>
