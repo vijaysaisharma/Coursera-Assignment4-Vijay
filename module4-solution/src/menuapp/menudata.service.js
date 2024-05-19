@@ -24,8 +24,8 @@
             console.log('in getItemsForCategory()' );
             return $http({
                 method: "GET",
-                // url: (ApiBasePath + "/menu_items/" + "L" + ".json")
-                url: ('https://coursera-jhu-default-rtdb.firebaseio.com/menu_items/L.json')
+                url: (ApiBasePath + "/menu_items/" + categoryShortName + ".json")
+                //url: ('https://coursera-jhu-default-rtdb.firebaseio.com/menu_items/L.json')
             }).then(function(response){
                 console.log('categoryShortName: ', categoryShortName);
                 console.log('data: ', response.data.menu_items);

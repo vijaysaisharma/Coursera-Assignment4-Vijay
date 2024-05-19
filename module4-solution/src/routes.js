@@ -49,7 +49,7 @@
                     return MenuDataService.getItemsForCategory($stateParams.categoryShortName)
                         .then(function(response){
                             console.log('in detail then resolve' );
-                            return response[0];
+                            return response;
                         });                    
                 }]
             }
