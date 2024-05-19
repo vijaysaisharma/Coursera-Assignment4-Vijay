@@ -29,7 +29,7 @@
             }).then(function(response){
                 console.log('categoryShortName: ', categoryShortName);
                 console.log('data: ', response.data.menu_items);
-                return response.data.menu_items;
+                return response.data;
             });
         };
     };
