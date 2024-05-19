@@ -17,7 +17,7 @@
         // Home page
         .state('home', {
           url: '/',
-          templateUrl: '/src/menuapp/templates/home.template.html'
+          templateUrl: 'src/menuapp/templates/home.template.html'
         })
         
         // Premade list page
